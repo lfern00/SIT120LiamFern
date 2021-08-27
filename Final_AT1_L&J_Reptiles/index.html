@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>L & J Reptiles</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <script src="main.js"></script>
+    <!-- Header code -->
+    <div class="header">
+        <!-- Logo -->
+        <a href="index.html">
+            <img src="assets/logo.jpg" height="100">
+        </a>
+        <!-- Links in right side of header -->
+        <div class="header-right">
+           	<a href="index.html">Home</a>
+           	<a href="records.html">Record Keeping</a>
+        	<a href="licensing.html">Licensing</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    
+    <!-- Image of Gecko on Home Page -->
+    <div class="geckoimage">
+        <img src="assets/gecko.jpg">    
+    </div>
+        
+    <!-- Welcome text below image on Home Page -->    
+    <div class="box" id="welcomeText">
+        Welcome to L & J Reptiles, we are experienced reptile breeders specialising in pythons, geckos and skinks.
+    </div>
+    
+    <div class="retail-wrapper">
+        <div id="app">
+            <div class="searchbar">
+                <input class="searchfield" type="text" v-model="search" placeholder="Search Species...">
+                <button class="searchbutton" @click="filteredListings">Search</button>
+            </div>
+
+            <div class="listings" v-for="listing in filteredListings">
+                <div class="listingcard">
+                    <img class="listingimg" v-bind:src="listing.img">
+                    <div class="listinginfo">
+                        <h2 class="listingspecies">{{ listing.species }}</h2>
+                        <h3 class="listingage">Age: {{ listing.age }}</h3>
+                        <h3 class="listinggender">Gender: {{ listing.gender }}</h3>
+                        <h3 class="listingseller">Sold By: {{ listing.seller }}</h3>
+                        <button class="purchasebutton">Buy Now</button>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Footer code -->
+    <div class="footer">
+        <div class="footer-right">
+            Copyright 2021 L & J Reptiles.
+        </div>
+    </div>
+
+    <script>
+        var app = new Vue({
+        el: '#app',
+        data: {
+        listings: [
+            { species: 'Gecko', seller: 'L & J Reptiles', age: "2 Years Old", gender: 'Male', img: 'assets/gecko2.jpg'},
+            { species: 'Lizard', seller: 'L & J Reptiles', age: "6 Months Old", gender: 'Female', img: 'assets/lizard.jpg'},
+            { species: 'Snake', seller: 'L & J Reptiles', age: '3 Months Old', gender: 'Female', img: 'assets/snake.jpg'},
+            { species: 'Turtle', seller: 'L & J Reptiles', age: '4 Years Old', gender: 'Male', img: 'assets/turtle.jpg'},
+            { species: 'Crocodile', seller: 'L & J Reptiles', age: '9 Years Old', gender: 'Male', img: 'assets/crocodile.jpg'},
+            ],
+        search: '',    
+        },
+        computed: {
+            filteredListings() {
+                return this.listings.filter(listing => listing.species.toLowerCase().includes(this.search.toLowerCase()));
+            },
+
+        },
+    })
+    </script>
+    
+    </body>
+</html>
