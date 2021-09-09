@@ -1,0 +1,152 @@
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #B7EEF5;
+}
+
+.header-right {
+  float: right;
+  padding-top: 2.25%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+.geckoimage {
+    position: relative;
+    padding-top: 60px;
+    padding-left: 50%;
+    margin-left: -351px;
+}
+
+.box {
+    width: 600px;
+    height: 150px;
+    display: block;
+    position: relative;
+    padding-left: 50%;
+    margin-left: -300px;
+    padding-top: 50px;
+}
+
+#welcomeText {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #B7EEF5;
+}
+
+.footer-right {
+  float: right;
+  padding-top: 2.5%;
+}
+
+.retail-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.searchbar {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(202, 198, 198);
+    padding: 20px;
+}
+
+.searchOptions {
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(0, 179, 255);
+}
+
+.stateBox {
+    height: 22px;
+    width: 22px;
+}
+
+.selectLicenseDiv {
+    font-size: 18px;
+    color: rgb(0, 179, 255);
+    padding-left: 30px;
+}
+
+.searchfield {
+    font-size: 30px;
+}
+
+.searchbutton {
+    background-color: rgb(0, 179, 255);
+    border: rgb(0, 179, 255);
+    border-radius: 2px;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.listingcard {
+    background-color: #b7eef55e;
+    max-width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.listingcard img {
+    min-width: 40%;
+    max-width: 40%;
+}
+
+.listinginfo {
+    padding-left: 100px;
+    padding-bottom: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.listinginfo h2 {
+    color: rgb(0, 179, 255);
+}
+
+.purchasebutton {
+    background-color: rgb(0, 179, 255);
+    border: rgb(0, 179, 255);
+    border-radius: 2px;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    
+}

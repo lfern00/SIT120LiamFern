@@ -1,0 +1,163 @@
+<html>
+  <body>
+    <h1>Week 3 Practical</h1>
+    <h2>Task 1 - To String Methods</h2>
+    <h3>String:</h3>
+    <p id="displaystring"></p>
+    <h3>Length of String:</h3>
+    <p id="lengthmethod"></p>
+    <h3>Extract part of String with Slice method:</h3>
+    <p id="slicemethod"></p>
+    <h3>Replace part of String with replace method:</h3>
+    <p id="replacemethod"></p>
+    <h3>Convert String to Lower Case:</h3>
+    <p id="lowercasemethod"></p>
+    <h3>Combine Strings with concat method:</h3>
+    <p id="concatmethod"></p>
+    
+    <h2>Task 2 - Number & Array methods</h2>
+    <h2> 1. Number Methods</h2>
+    <h3>Return number as String using toString()</h3>
+    <p id="tostringmethod"></p>
+    <h3>Return a decimal number rounded with exponential notation using toExponential()</h3>
+    <p id="toexponentialmethod"></p>
+    <h3>Return a decimal number rounded to 2 decimals with toFixed() method</h3>
+    <p id="tofixedmethod"></p>
+    <h3>Return a decimal number rounded to a specific length of 6 using toPrecision()</h3>
+    <p id="toprecisionmethod"></p>
+    <h3>Print the lowest possible number in JavaScript</h3>
+    <p id="minvalue"></p>
+    
+    <h2>2. Array Methods</h2>
+    <h3>Convert Array to String using toString() method</h3>
+    <p id="arraytostringmethod"></p>
+    <h3>Convert Array to String using Join with "&" as seperator</h3>
+    <p id="joinmethod"></p>
+    <h3>Remove last element from Array with pop() method</h3>
+    <p id="popmethod"></p>
+    <h3>Add element to Array with push() method</h3>
+    <p id="pushmethod"></p>
+    <h3>Change element in array with index number</h3>
+    <p id="changearraymethod"></p>
+    <h3>Delete element in array with index</h3>
+    <p id="deletemethod"></p>
+    <h3>Merging arrays with concat() method</h3>
+    <p id="arrayconcatmethod"></p>
+    <h3>Add elements to array with splice() method</h3>
+    <p id="arraysplicemethod"></p>
+    <h3>Create new array with elements of array with slice() method</h3>
+    <p id="arrayslicemethod"></p>
+    
+    <h2>Task 3 - Get & Set Methods</h2>
+    
+    <h3>setFullYear method</h3>
+    <p id="setyear"></p>
+    
+    <h3>setMonth method</h3>
+    <p id="setmonth"></p>
+    
+    <h3>setDate method</h3>
+    <p id="setdate"></p>
+    
+    <h3>getFullYear method</h3>
+    <p id="getyear"></p>
+    
+    <h3>getMonth method</h3>
+    <p id="getmonth"></p>
+    
+    <h3>getDay method</h3>
+    <p id="getday"></p>
+  </body>  
+    
+  <script>
+    var string1 = "THIS IS A STRING OF CHARACTERS"
+
+    document.getElementById("displaystring").innerHTML = string1;
+
+    document.getElementById("lengthmethod").innerHTML = string1.length;
+
+    document.getElementById("slicemethod").innerHTML = string1.slice(0,16);
+
+    var string2 = string1.replace("STRING", "DIFFERENT STRING");
+
+    document.getElementById("replacemethod").innerHTML = string2;
+
+    document.getElementById("lowercasemethod").innerHTML = string1.toLowerCase();
+
+    document.getElementById("concatmethod").innerHTML = string1.concat(", ", string2);
+
+    var number1 = 250;
+
+    document.getElementById("tostringmethod").innerHTML = number1.toString();
+
+    var number2 = 73.35734
+    document.getElementById("toexponentialmethod").innerHTML = number2.toExponential(2);
+
+    document.getElementById("tofixedmethod").innerHTML = number2.toFixed(2);
+
+    document.getElementById("toprecisionmethod").innerHTML = number2.toPrecision(6);
+
+    var number3 = Number.MIN_VALUE;
+
+    document.getElementById("minvalue").innerHTML = number3;
+
+    var array1 = ["One", "Two", "Three", "Four", "Five"];
+
+    document.getElementById("arraytostringmethod").innerHTML = array1.toString();
+
+    document.getElementById("joinmethod").innerHTML = array1.join(" & ");
+
+    array1.pop();
+    document.getElementById("popmethod").innerHTML = array1;
+
+    array1.push("5")
+    document.getElementById("pushmethod").innerHTML = array1;
+
+    array1[0] = "1";
+    document.getElementById("changearraymethod").innerHTML = array1;
+
+    delete array1[4];
+    document.getElementById("deletemethod").innerHTML = array1;
+
+    var array2 = ["Five", "Four", "Three", "Two", "One"];
+
+    var array3 = array1.concat(array2);
+
+    document.getElementById("arrayconcatmethod").innerHTML = array3;
+
+    array1.splice(2, 0, "2.5");
+
+    document.getElementById("arraysplicemethod").innerHTML = array1;
+
+    var array4 = array1.slice(1, 4)
+    document.getElementById("arrayslicemethod").innerHTML = array4;
+
+    var d1 = new Date();
+
+    d1.setFullYear(1999)
+    document.getElementById("setyear").innerHTML = d1;
+
+    d1.setMonth(2)
+    document.getElementById("setmonth").innerHTML = d1;
+
+    d1.setDate(5)
+    document.getElementById("setdate").innerHTML = d1;
+
+    document.getElementById("getyear").innerHTML = d1.getFullYear();
+
+    document.getElementById("getmonth").innerHTML = d1.getMonth();
+
+    document.getElementById("getday").innerHTML = d1.getDay();
+  </script>
+  <style>
+    h1 {
+  color: midnightblue;
+    }
+    h2 {
+      color: darkred;
+    }  
+    body {
+      background-color: lightcyan;
+    }
+  </style>
+</html

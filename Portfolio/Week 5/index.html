@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+          <div id="app" class="app">
+          <h1>Welcome to the secret word game!</h1>
+          <h2>Click the button below to begin</h2>
+          <button v-on:click="startgame" type="button">Click me!</button>
+          <div>
+            <h2>Or this button</h2>
+            <startbutton
+            v-on:start-game="clicked = true"
+            ></startbutton>
+          </div>
+          <span v-if="clicked">{{ welcome }}</span>
+          <span v-else>You have not started yet</span>
+          <h2 v-show="clicked">Yay!</h2>
+          <h2 v-show="clicked">Enter the password "game" into the input field below to show all the secret words</h2> 
+          <div v-show="clicked">
+            <input type="text" v-model="userpassword">
+            <button v-on:click="checkpassword">Enter</button>
+          </div>
+          <div v-if="passwordcheck">
+            <h2>List of Secret words: </h2>
+            <ul>
+              <secretword
+              v-for="secret in secrets"
+              v-bind:word="secret.word"
+              ></secretword>  
+            </ul>
+            <inputsecret
+            v-for="secret in secrets"
+            v-bind:secret="secret.word"
+            ></inputsecret>
+          </div>
+        </div>
+      <script>
+        Vue.component('secretword', {
+          props: ['word'],
+          template: '<li>{{ word }}</li>'
+        })
+
+        Vue.component('inputsecret', {
+          props: ['secret'],
+          template: '<input type="text" placeholder="Enter Secret...">'
+        })
+
+        
+        Vue.component('startbutton', {
+          template: '<button v-on:click="$emit(\'start-game\')">Start<button>'
+        })
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                welcome: "You have started the game",
+                clicked: false,
+                password: "game",
+                userpassword: "",
+                passwordcheck: false,
+                secrets: [
+                    { word: "Dog" },
+                    { word: "Cat" },
+                    { word: "Dishwasher" },
+                    { word: "Cow" },
+                    { word: "TV" },
+                    { word: "House" },
+                    { word: "Giraffe" }
+                    ]
+                },
+                methods: {
+                    startgame() {
+                      this.clicked = true;
+                    },
+                    checkpassword() { 
+                      if (this.userpassword === this.password)
+                        {
+                          this.passwordcheck = true;
+                        }
+                    },
+                },       
+            })
+      </script>
+      <style>
+        body {
+          background-color: lightcyan;
+        }
+      </style>
+    </body>
+</html>

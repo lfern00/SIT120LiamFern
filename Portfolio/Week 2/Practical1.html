@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title> Week 2 Practical </title>
+    <h1> Week 2 Practical &#128512; </h1>
+    <h2> This is a web page to demonstrate the practical tasks for Week 2 </h2>
+    <h3> By Liam Fern </h3>
+    </head>
+    <div class="column side">
+    <body>
+        <h1 style="color: darkblue;">Side Column</h1> 
+        
+        <p>Example of a HTML Table</p>
+        <table id="t1">
+            <tr>
+                <th> Unit Code </th>
+                <th> Unit Name </th>    
+            </tr>
+            <tr>
+                <td> SIT120 </td>
+                <td> Introduction to Responsive Web Apps</td>
+            </tr>
+        </table>
+        
+        <p>Example of a HTML Form</p>
+        <form>
+            <label for="age">Your age:</label><br>
+            <input type="text" id="age" name="age"><br>
+            <label for="DOB">Your Date of Birth:</label><br>
+            <input type="text" id="DOB" name="DOB"><br>
+            <br>
+            <input id="htmlsubmit" name="submit">    
+        </form>
+        
+        <main id="app">
+            <p>To Do List Using Vue</p>
+            <form @submit.prevent="newToDo">
+                <label for="addToDo">Add ToDo</label>
+                <input v-model="nToDo" type="text" name="addToDo" id="addToDo">
+                <button id="todosubmit" type="submit" name="submit">Add</button>
+            </form>
+            <ol id="app1">
+                <li v-for="todo in todos">
+                    <span>{{todo.title}}</span>
+                    <input type="checkbox" v-model="todo.done">
+                </li>
+            </ol>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="vue.js" charset="utf-8"></script>
+
+    </body>    
+    </div>
+    
+    <div class="column middle">
+    <h1 style="color: darkblue;">Main Column</h1>    
+    <body>
+        
+        <p> Example Image </p>
+        <img src="tech.jpeg" alt="Example Image">
+        
+        <p> Example of a HTML List:</p>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        
+        <p>Here is a HTML Link</p>
+        <a href="https://www.deakin.edu.au/">Deakin University</a> 
+        
+        <p>Form to display student average using JavaScript</p>
+        <form>
+        <label for="fscore">Enter your First Score</label><br>
+        <input type="text" id="fscoreid" name="fscore" value="74"><br>
+        <label for="sscore">Enter your Second Score</label><br>
+        <input type="text" id="sscoreid" name="sscore" value="84"><br>
+        <label for="tscore">Enter your Third Score</label><br>
+        <input type="text" id="tscoreid" name="tscore" value="82"><br>
+        <label for="foscore">Enter your Fourth Score</label><br>
+        <input type="text" id="foscoreid" name="foscore" value="86"><br>
+        <br>
+        <p>Your average is listed below</p>
+        <p id="average"></p>
+        </form>
+        
+        <p>Canvas Graphic using HTML & JavaScript</p>
+        <canvas id="canvas1" width="300" height="200"></canvas>
+            
+        <p>YouTube video Plugin</p>    
+        <iframe width="300px" height="200px" src="https://www.youtube.com/embed/nhBVL41-_Cw"></iframe>
+            
+        <p>Geolocation</p>
+        <button id="geobutton" onclick="UserLocation()">Get Location!</button>
+        <p id="geoAPI"></p>
+            
+        <script>
+        var geo = document.getElementById("geoAPI");
+            
+        function UserLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showUserPosition);
+          }
+        }
+
+        function showUserPosition(position) {
+            geo.innerHTML = "Your Latitude = " + position.coords.latitude + 
+            "<br>Your Longitude = " + position.coords.longitude;
+            }
+        </script>
+            
+        <script>
+        var canvas = document.getElementById("canvas1");
+        var context = canvas.getContext("2d");
+
+        var gradient = context.createLinearGradient(0, 0, 300, 0);
+        gradient.addColorStop(0, "blue");
+        gradient.addColorStop(1, "purple");
+            
+       
+        context.fillStyle = gradient;
+        context.fillRect(10, 10, 300, 200);
+        context.font = "30px Comic Sans";
+        context.strokeText("This is a Graphic", 60, canvas.height/2);
+        </script>
+
+        <script>
+        var a, b, c, d, x, y;
+        a = document.getElementById("fscoreid").value
+        b = document.getElementById("sscoreid").value
+        c = document.getElementById("tscoreid").value
+        d = document.getElementById("foscoreid").value
+        x = +a + +b + +c + +d
+        y = x / 4
+        document.getElementById("average").innerHTML = y;
+        </script>
+    
+    </body>
+    </div>
+</html>

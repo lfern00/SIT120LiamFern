@@ -1,0 +1,26 @@
+    #t1 {
+        width: 50%;
+        text-align: center;
+        background-color:blanchedalmond ; 
+        border: 1px solid black;  
+    }
+    td, th {
+        border: 1px solid black;
+        color: brown;    
+    } 
+    p {
+        color: firebrick;
+        font-size: large;
+        border: ridge; 
+        border-color: violet;
+        border-radius: 5px;   
+    }
+   #app1 {
+       background: rgb(72, 84, 197);
+       border: 1px solid magenta;
+       border-color: teal;
+       border-radius: 5px;
+       font-size: xx-large;
+       color: magenta;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }

@@ -1,0 +1,118 @@
+#t1 {
+    width: 50%;
+    text-align: center;
+    background-color:blanchedalmond ; 
+    border: 1px solid black;  
+}
+td, th {
+    border: 1px solid black;
+    color: brown;    
+} 
+p {
+    color: darkred;
+    font-family: fantasy;
+    font-size: 20px;
+    align-content: center;
+    display: flex;
+    margin-left: auto;
+    text-align: left;
+    text-decoration: underline;
+}
+#app1 {
+   background: rgb(72, 84, 197);
+   border: 1px solid magenta;
+   border-color: teal;
+   border-radius: 5px;
+   font-size: xx-large;
+   color: magenta;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    align-content: center;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-decoration: underline;
+    font-size: 36px;
+    color: midnightblue;
+    font-family: fantasy;
+}
+
+h2 {
+    padding: 10px;
+    display: flex;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+    color: dodgerblue;
+}
+
+h3 {
+    padding: 15px;
+    display: flex;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+    color: cadetblue;
+}
+
+ body {
+    background-color: lightgray;
+    align-content: center;
+}
+
+.column {
+    float: left;
+    padding: 15px;    
+}
+
+.column.side {
+    width: 25%;
+}
+
+.column.middle {
+    width: 50%;
+}
+
+#htmlsubmit {
+    margin: auto;
+    display: flex;
+    align-content: center;
+    color: darkslategrey;
+    font-family: fantasy;
+    background-color: lightblue;
+    font-size: 18px;
+    
+}
+
+#todosubmit {
+    margin: auto;
+    display: flex;
+    align-content: center;
+    margin-top: 10px;
+    color: darkslategray;
+    font-family: fantasy;
+    background-color: lightblue;
+    font-size: 18px;
+}
+
+#geobutton {
+    color: darkslategray;
+    font-family: fantasy;
+    background-color: lightblue;
+    font-size: 18px;
+}
+ol {
+    color: midnightblue;
+    font-family: fantasy
+}
+
+li {
+    padding-top: 10px;
+}
+
+label {
+    color: midnightblue;
+    font-family: fantasy;
+}
